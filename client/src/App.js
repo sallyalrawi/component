@@ -21,18 +21,19 @@ class App extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <form className = "form-inline" onSubmit={this.handleSubmit}>
+        <label className ="my-1 mr-2">
           Pick Your Plan:
-          <select value={this.state.value} onChange={this.handleChange}>
+          <select className = "custom-select my-1 mr-sm-2" value={this.state.value} onChange={this.handleChange}>
             <option value="healthyme">Healthy Me</option>
             <option value="gianWeight">Gian Weight</option>
             <option value="loseWeight">Lose Weight</option>
  
           </select>
         </label>
-        <input type="submit" value="Submit" />
+        <input className ="btn btn-primary my-1"  type="submit" value="Submit" />
       </form>
+    
     );
   }
 }
